@@ -26,13 +26,13 @@ public class UploadFilesServiceImpl implements IUploadFilesService {
             long maxFileSize = 5 * 1024 * 1024;
 
             if (fileSize > maxFileSize) {
-                return "File size must be less the or equal 5MB";
+                return "File size must be less the or equal 5MB!!!";
             }
 
             if (
                     !fileOriginalName.endsWith(".jpg") && !fileOriginalName.endsWith(".png") && !fileOriginalName.endsWith(".jpeg")
             ) {
-                return "Only JPG, PNG or JPEG files are allowed";
+                return "Only JPG, PNG or JPEG files are allowed!!!";
             }
 
             String fileExtension = fileOriginalName.substring(fileOriginalName.lastIndexOf("."));
